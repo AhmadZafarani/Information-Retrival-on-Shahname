@@ -45,12 +45,8 @@ def transformers(query: str, k: int) -> list:
 
 def clustering(query: str) -> dict:
     result = {}
-    expanded_query = query_expansion(query)
-    result["expanded_query"] = expanded_query
     nearest_cluster = get_cluster_number_for_query(query) + 1
     result["nearest_cluster"] = nearest_cluster
-    nearest_expanded_cluster = get_cluster_number_for_query(expanded_query) + 1
-    result["nearest_expanded_cluster"] = nearest_expanded_cluster
     return result
 
 

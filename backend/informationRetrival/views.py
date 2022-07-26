@@ -61,10 +61,4 @@ def elastic(request: HttpRequest) -> HttpResponse:
 
 
 def link_analyze(request: HttpRequest) -> HttpResponse:
-    query = request.GET.get('query', None)
-    if query is None:
-        return HttpResponseBadRequest("`query` argument not found in the request")
-
-    result = models.link_analyze(query)
-    return render(request, 'informationRetrival/link_analyze.html',
-                  context={'result': result})
+    return render(request, 'informationRetrival/link_analyze.html')

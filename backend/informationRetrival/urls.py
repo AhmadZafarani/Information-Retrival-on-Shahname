@@ -8,5 +8,5 @@ urlpatterns = [
     path('clustering/', clustering, name='clustering'),
     path('classification/', classification, name='classification'),
     path('elastic/', elastic, name='elastic'),
-    path('link_anlyze/', link_analyze, name='link_analyze'),
+    path('link_analyze/', link_analyze, name='link_analyze'),
 ]
