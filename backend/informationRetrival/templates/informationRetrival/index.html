@@ -1,0 +1,59 @@
+<div dir="rtl" class="container">
+    <div class="form-container">
+        <input id="query" type="text" placeholder="پرسمان...">
+
+        <label for="k">تعداد</label>
+        <select name="k" id="k">
+            <option selected value="10">10</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+
+        <label for="method">روش</label>
+        <select name="method" id="method">
+            <option selected value="tfidf">tfidf</option>
+            <option value="fasttext">fasttext</option>
+            <option value="transformers">transformers</option>
+            <option value="boolean">boolean</option>
+            <option value="clustering">clustering</option>
+            <option value="classification">classification</option>
+            <option value="link_analyze">Link Analyze</option>
+            <option value="elasticsearch">elasticsearch</option>
+        </select>
+        <br>
+        <button id="submit">جست و جو</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('submit').addEventListener('click', (e) => {
+        e.preventDefault()
+        const differentUrls = ['classification', '', 'clustering', 'link_analyze'];
+        if (differentUrls.includes(document.getElementById('method').value)) {
+            window.location.href = `/${document.getElementById('method').value}/?` + new URLSearchParams({
+                query: document.getElementById('query').value,
+            })
+        } else {
+            window.location.href = `retrival/${document.getElementById('method').value}/?` + new URLSearchParams({
+                query: document.getElementById('query').value,
+                k: document.getElementById('k').value,
+            })
+        }
+    }, false)
+</script>
+
+<style>
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+    }
+</style>

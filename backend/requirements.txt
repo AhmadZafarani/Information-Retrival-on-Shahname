@@ -1,0 +1,12 @@
+django 
+gunicorn 
+psycopg2-binary 
+gevent
+django-material==0.5.1
+numpy
+tqdm
+gensim
+hazm
+sklearn
+torch
+transformers

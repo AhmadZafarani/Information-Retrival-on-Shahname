@@ -1,0 +1,38 @@
+<div class="container" dir="rtl">
+    <h2>پرس‌وجوی گسترش‌یافته: «{{ result.expanded_query }}»</h2>
+    <br>
+    <br>
+    <br>
+
+    {% for answer in result.answers %}
+        <div class="card">{{ answer }}</div>
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+
+    {% for answer in result.expanded_answers %}
+        <div class="card">{{ answer }}</div>
+    {% endfor %}
+
+</div>
+
+<style>
+    .card {
+        border: 1px solid navy;
+        border-radius: 8px;
+        padding: 8px;
+        margin: 4px;
+        width: 800px;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+</style>

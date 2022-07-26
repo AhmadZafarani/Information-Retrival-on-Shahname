@@ -1,0 +1,23 @@
+<div class="container" dir="rtl">
+    <h2>پرس‌وجوی گسترش‌یافته: «{{ result.expanded_query }}»</h2>
+    <br>
+    <h2>نزدیک‌ترین خوشه‌بندی «{{ result.nearest_cluster }}»</h2>
+    <br>
+    <h2>نزدیک‌ترین خوشه‌بندی گسترش‌یافته: «{{ result.nearest_expanded_cluster }}»</h2>
+    <br>
+    <div>
+        <img src="../../static/predicted_clusters.png" alt="predicted clusters">
+        <img src="../../static/real_clusters.png" alt="real clusters">
+    </div>
+</div>
+
+<style>
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+</style>
