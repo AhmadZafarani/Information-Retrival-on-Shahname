@@ -1,22 +1,28 @@
 <div class="container" dir="rtl">
+    <button id="return">بازگشت به صفحه اصلی</button>
     <h2>پرس‌وجوی گسترش‌یافته: «{{ result.expanded_query }}»</h2>
     <br>
     <br>
     <br>
-
+    <h2>نتایج برای پرس‌وجو: «{{ result.query }}»</h2>
     {% for answer in result.answers %}
         <div class="card">{{ answer }}</div>
     {% endfor %}
     <br>
     <br>
     <br>
-
+    <h2>نتایج برای پرس‌وجوی گسترش‌یافته: «{{ result.expanded_query }}»</h2>
     {% for answer in result.expanded_answers %}
         <div class="card">{{ answer }}</div>
     {% endfor %}
 
 </div>
-
+<script>
+    document.getElementById('return').addEventListener('click', (e) => {
+        e.preventDefault()
+        window.location.href = '/'
+    }, false)
+</script>
 <style>
     .card {
         border: 1px solid navy;
@@ -33,6 +39,5 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
     }
 </style>

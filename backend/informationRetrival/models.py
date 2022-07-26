@@ -8,6 +8,7 @@ from .logic.classification import get_classification_story_for_query
 
 def boolean(query: str, k: int) -> dict:
     result = {}
+    result["query"] = query
     expanded_query = query_expansion(query)
     result["expanded_query"] = expanded_query
     answers = get_boolean_query_results(query, k)
@@ -19,6 +20,7 @@ def boolean(query: str, k: int) -> dict:
 
 def tfidf(query: str, k: int) -> dict:
     result = {}
+    result["query"] = query
     expanded_query = query_expansion(query)
     result["expanded_query"] = expanded_query
     answers = get_tfidf_query_results(query, k)
@@ -30,6 +32,7 @@ def tfidf(query: str, k: int) -> dict:
 
 def fasttext(query: str, k: int) -> dict:
     result = {}
+    result["query"] = query
     expanded_query = query_expansion(query)
     result["expanded_query"] = expanded_query
     answers = get_fasttext_query_results(query, k)
@@ -45,13 +48,17 @@ def transformers(query: str, k: int) -> list:
 
 def clustering(query: str) -> dict:
     result = {}
+    result["query"] = query
     nearest_cluster = get_cluster_number_for_query(query) + 1
+    if nearest_cluster == 0:
+        nearest_cluster = "هیچ‌کدام"
     result["nearest_cluster"] = nearest_cluster
     return result
 
 
 def classification(query: str) -> str:
     result = {}
+    result["query"] = query
     expanded_query = query_expansion(query)
     result["expanded_query"] = expanded_query
     label = get_classification_story_for_query(query)
@@ -63,11 +70,6 @@ def classification(query: str) -> str:
 
 def elastic(query: str, k: int) -> list:
     pass
-
-
-def link_analyze(query: str) -> int:
-    names = {}
-    return names.get(query, "")
 
 
 def normalize(answers: list) -> list:

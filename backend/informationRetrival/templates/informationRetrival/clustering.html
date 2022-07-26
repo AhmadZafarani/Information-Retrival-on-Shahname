@@ -1,12 +1,30 @@
 <div class="container" dir="rtl">
+    <button id="return">بازگشت به صفحه اصلی</button>
     <h2>نزدیک‌ترین خوشه‌بندی «{{ result.nearest_cluster }}»</h2>
+    <br>
+    <h2>انواع خوشه‌های بدست آمده</h2>
+    <div>
+        1 -> حالات درونی و احساسات ایرانیان 
+        2 -> پهلوانان ایرانی 
+        3 -> جنگ‌های رستم 
+        4 -> حالت‌های خونریزی و جنگ آوری رستم 
+        5 -> کلمات کم تکرار در شاهنامه 
+        6 -> دیالوگ پیران و بزرگان ایرانی با رستم
+    </div>
     <br>
     <div>
         <img src="../../static/predicted_clusters.png" alt="predicted clusters">
+        <figcaption>نقشه خوشه‌بندی ابیات شاهنامه</figcaption>
         <img src="../../static/real_clusters.png" alt="real clusters">
+        <figcaption>نقشه برچسب‌های واقعی ابیات شاهنامه</figcaption>
     </div>
 </div>
-
+<script>
+    document.getElementById('return').addEventListener('click', (e) => {
+        e.preventDefault()
+        window.location.href = '/'
+    }, false)
+</script>
 <style>
     .container {
         width: 100%;
@@ -14,6 +32,5 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
     }
 </style>

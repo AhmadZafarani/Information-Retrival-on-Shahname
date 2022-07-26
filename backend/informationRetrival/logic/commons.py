@@ -12,7 +12,10 @@ class Utils:
     def get_beyts_by_mesras(self, mesras: list) -> list:
         beyts = []
         for mesra in mesras:
-            idx = self.data.index(mesra)
+            try:
+                idx = self.data.index(mesra)
+            except ValueError:
+                continue
             if idx % 2 == 0:
                 beyt = mesra + "####" + self.data[idx + 1]
             else:

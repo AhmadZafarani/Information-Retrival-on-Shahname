@@ -1,4 +1,5 @@
 <div class="container" dir="rtl">
+    <button id="return">بازگشت به صفحه اصلی</button>
     <h2>پرس‌وجوی گسترش‌یافته: «{{ result.expanded_query }}»</h2>
     <br>
     <br>
@@ -8,8 +9,21 @@
     <br>
     <br>
     <h2>برچسب پرس‌وجوی گسترش‌یافته: «{{ result.expanded_label }}»</h2>
+    <br>
+    <h2>برچسب‌ها (داستان‌ها)</h2>
+    <div>
+        داستان دوازده رخ<br>
+        داستان اکوان دیو<br>
+        داستان رستم و اسفندیار<br>
+        داستان سیاوش<br>
+    </div>
 </div>
-
+<script>
+    document.getElementById('return').addEventListener('click', (e) => {
+        e.preventDefault()
+        window.location.href = '/'
+    }, false)
+</script>
 <style>
     .container {
         width: 100%;
@@ -17,6 +31,5 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
     }
 </style>
