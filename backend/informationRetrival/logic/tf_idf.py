@@ -5,7 +5,7 @@ from numpy.linalg import norm
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tqdm import tqdm
 
-from .commons import *
+from .commons import Utils
 
 
 class TFIDF:

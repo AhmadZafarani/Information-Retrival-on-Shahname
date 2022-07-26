@@ -1,6 +1,6 @@
 from .logic.boolean import get_boolean_query_results
 from .logic.clustering import get_cluster_number_for_query
-from .logic.commons import query_expansion
+from .logic.query_expansion import query_expansion
 from .logic.fasttext import get_fasttext_query_results
 from .logic.tf_idf import get_tfidf_query_results
 from .logic.classification import get_classification_story_for_query
@@ -57,11 +57,11 @@ def clustering(query: str) -> dict:
 def classification(query: str) -> str:
     result = {}
     expanded_query = query_expansion(query)
-    result["expanded query"] = expanded_query
+    result["expanded_query"] = expanded_query
     label = get_classification_story_for_query(query)
     result["label"] = label
     expanded_label = get_classification_story_for_query(expanded_query)
-    result["expanded label"] = expanded_label
+    result["expanded_label"] = expanded_label
     return result
 
 

@@ -1,5 +1,7 @@
-from django.http import (HttpRequest, HttpResponse, HttpResponseBadRequest, Http404)
+from django.http import (Http404, HttpRequest, HttpResponse,
+                         HttpResponseBadRequest)
 from django.shortcuts import render
+
 from . import models
 
 
@@ -39,9 +41,9 @@ def classification(request: HttpRequest) -> HttpResponse:
     if query is None:
         return HttpResponseBadRequest("`query` argument not found in the request")
 
-    story = models.classification(query)
+    result = models.classification(query)
     return render(request, 'informationRetrival/classification.html',
-                  context={'story': story})
+                  context={'result': result})
 
 
 def elastic(request: HttpRequest) -> HttpResponse:
@@ -56,6 +58,7 @@ def elastic(request: HttpRequest) -> HttpResponse:
     result = models.elastic(query, k)
     return render(request, 'informationRetrival/elastic.html',
                   context={'result': result})
+
 
 def link_analyze(request: HttpRequest) -> HttpResponse:
     query = request.GET.get('query', None)

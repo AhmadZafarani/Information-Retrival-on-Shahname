@@ -7,7 +7,7 @@ from numpy.linalg import norm
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tqdm import tqdm
 
-from .commons import *
+from .commons import Utils
 
 
 class FastText:
@@ -69,10 +69,10 @@ class FastText:
 
 def get_fasttext_query_results(query: str, k: int = 10) -> list:
     cwd = Path(__file__).parent.resolve()
-    vector_file_path = cwd / Path('fasttext_vec_file.vec')
-    word_vectors = KeyedVectors.load_word2vec_format(vector_file_path)
     u = Utils(cwd)
     sen_v2 = u.get_data()
+    vector_file_path = cwd / Path('fasttext_vec_file.vec')
+    word_vectors = KeyedVectors.load_word2vec_format(vector_file_path)
     fasttext1_2 = FastText(word_vectors, sen_v2)
     nearest_mesras = fasttext1_2.forward(query, k)
     return u.get_beyts_by_mesras(nearest_mesras)
