@@ -7,7 +7,7 @@ from numpy.linalg import norm
 
 
 def get_fastext_average(mesra: str, cwd: Path) -> np.array:
-    vector_file_path = cwd / Path('vec_file.vec')
+    vector_file_path = cwd / Path('clustering_vec_file.vec')
     word_vectors = KeyedVectors.load_word2vec_format(vector_file_path)
     vector_sum = np.zeros(200)
     num = 0
