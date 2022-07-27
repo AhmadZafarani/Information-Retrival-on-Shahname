@@ -2,7 +2,7 @@ django
 gunicorn 
 psycopg2-binary 
 gevent
-django-material==0.5.1
+django-material
 numpy
 tqdm
 gensim
