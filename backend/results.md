@@ -1,11 +1,7 @@
-## Results:
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+## MRR Results:
 
-
- |bool|fasttext|tfidf|elastic|transformer|bool_expanded|fasttext_expanded|tfidf_expanded|transformer_expanded|elastic_expanded
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- 
+ -|bool|fasttext|tfidf|elastic|transformer|bool_expanded|fasttext_expanded|tfidf_expanded|transformer_expanded|elastic_expanded
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |---
 query1|0.0143|0.0033|0.0103|0.001|0.0086|0.0191|0.0101|0.0099|0.0116|0.0138
 query2|0.0094|0.0044|0.0139|0.001|0.0087|0.0204|0.0096|0.0118|0.0085|0.0139
 query3|0.0134|0.0042|0.0321|0.001|0.0168|0.0238|0.0103|0.0146|0.0072|0.0153
