@@ -1,3 +1,6 @@
+## شاهنامه:
+شاهنامه اثر حکیم ابوالقاسم فردوسی توسی، حماسه‌ای منظوم، بر حسب دست نوشته‌های موجود دربرگیرنده نزدیک به ۵۰٬۰۰۰ بیت تا نزدیک به ۶۱٬۰۰۰ بیت و یکی از بزرگ‌ترین و برجسته‌ترین سروده‌های حماسی جهان است که سرایش آن دست‌آوردِ دست‌کم سی سال کارِ پیوستهٔ این سخن‌سرای نامدار ایرانی است.
+در این پروژه متد هایی که در کلاس بازیابی اطلاعات به آن پرداخته شد شامل درست کردن بردارهای معنا دار، دسته بندی بر اساس اسامی داستان ها، خوشه بندی و لینک بر روی داده ی شاهنامه پیاده سازی شده است و همچنین هر کدام از این متدها با روش های گوناگون مورد اعتبارسنجی قرار گرفته اند. 
 
 <div dir="rtl">
 
@@ -58,3 +61,64 @@ transition
 ابتدا مدل را روی کل داده های شاهنامه learn کردیم و پیش به ازای هر query ورودی بعد از embed کردن آن، k بیت نزدیک به آن را از نظر فاصله کسینوسی خروجی داده ایم.
 </div>
 
+
+## MRR Results:
+
+ -|bool|fasttext|tfidf|elastic|transformer|bool_expanded|fasttext_expanded|tfidf_expanded|transformer_expanded|elastic_expanded
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |---
+query1|0.0143|0.0033|0.0103|0.001|0.0086|0.0191|0.0101|0.0099|0.0116|0.0138
+query2|0.0094|0.0044|0.0139|0.001|0.0087|0.0204|0.0096|0.0118|0.0085|0.0139
+query3|0.0134|0.0042|0.0321|0.001|0.0168|0.0238|0.0103|0.0146|0.0072|0.0153
+query4|0.0146|0.0081|0.0034|0.0009|0.0035|0.0195|0.0084|0.011|0.0085|0.0125
+query5|0.0086|0.0085|0.014|0.0009|0.0103|0.0214|0.0115|0.0115|0.0104|0.015
+query6|0.0102|0.0036|0.0237|0.0009|0.009|0.0234|0.0132|0.0162|0.0115|0.0149
+query7|0.0093|0.0115|0.0166|0.0009|0.0105|0.0213|0.0136|0.0131|0.0088|0.0148
+query8|0.0114|0.0042|0.0122|0.0009|0.0084|0.0167|0.0084|0.0104|0.0029|0.0107
+query9|0.0086|0.0041|0.0055|0.0009|0.0034|0.017|0.0076|0.0094|0.0028|0.0106
+query10|0.0095|0.007|0.0181|0.0009|0.0084|0.0217|0.0145|0.0135|0.0114|0.0154
+
+
+
+
+make sure that `docker` and `docker-compose` are installed
+
+run:\
+`docker --version`\
+resulted in:\
+`Docker version 20.10.16, build aa7e414`
+
+also run:\
+`docker-compose --version`\
+resulted in:\
+`docker-compose version 1.29.2, build 5becea4c`
+
+clone project to the mir_project directory, then:
+
+download this three files from links below and place them in path : `backend/informationRetrival/logic/`
+
+[classification_pickle.pkl](https://drive.google.com/file/d/1-1c4ODqDi_ssdwOw1ZiEQoJSODVmbboW/view?usp=sharing)
+
+[fasttext_vectors.txt](https://drive.google.com/file/d/1P8yihfE6C8Kmi3VTSfr0CrvzovzL6hBn/view?usp=sharing)
+
+[all_vec.out](https://drive.google.com/file/d/11KHGgkyaUyBUzGp1zqJkR75K6TdClkPq/view?usp=sharing)
+
+now we are ready to run the project. To achive that, run:
+
+`cd mir_project`\
+and now, run:\
+`docker-compose up -d`
+
+if you get permission denied exception, please run above command with sudo \
+And wait for the containers... 
+
+
+## Team members:
+|First Name|Last Name|Student ID|
+|---|---|---|
+|Amirhossein|Alimohammadi|97110166|
+|Amirmahdi|Hosseinabadi|97110069|
+|Helia|Akhtarkavian|98170657|
+|Ahmad|Zaferani|97105985|
+|Mohammadhossein|Gheisarieh|97106238|
+|Alireza|Babazadeh|97101315|
+|Parsa|Rostami|96101646|
