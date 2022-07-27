@@ -23,7 +23,7 @@ resulted in:\
 clone project to the mir_project directory, then:
 `cd mir_project`\
 and now, run:\
-`docker-compose up -d`\
+`docker-compose up -d`
 
 if you get permission denied exception, please run above command with sudo \
 And wait for the containers... 
