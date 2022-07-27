@@ -37,8 +37,8 @@ And wait for the containers...
 ## Team members:
 |First Name|Last Name|Student ID|
 |---|---|---|
-|Amirhossein|Alimohammadi||
-|Amirmehdi|Hosseinabadi||
+|Amirhossein|Alimohammadi|97110166|
+|Amirmahdi|Hosseinabadi|97110069|
 |Helia|Akhtarkavian||
 |Ahmad|Zaferani|97105985|
 |Mohammadhossein|Gheisarieh|97106238|
