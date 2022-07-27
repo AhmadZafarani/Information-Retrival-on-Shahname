@@ -10,3 +10,4 @@ hazm
 sklearn
 torch
 transformers
+elasticsearch

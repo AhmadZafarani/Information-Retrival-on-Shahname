@@ -11,7 +11,8 @@ def index(request: HttpRequest) -> HttpResponse:
 
 def retrival(request: HttpRequest, retrival_type: str) -> HttpResponse:
     allowed_types = {'boolean': models.boolean, 'tfidf': models.tfidf,
-                     'fasttext': models.fasttext, 'transformers': models.transformers}
+                     'fasttext': models.fasttext, 'transformers': models.transformers,
+                     "elastic": models.elastic}
     if retrival_type not in allowed_types:
         raise Http404("Retrival Type does not exist")
 
@@ -43,20 +44,6 @@ def classification(request: HttpRequest) -> HttpResponse:
 
     result = models.classification(query)
     return render(request, 'informationRetrival/classification.html',
-                  context={'result': result})
-
-
-def elastic(request: HttpRequest) -> HttpResponse:
-    query = request.GET.get('query', None)
-    if query is None:
-        return HttpResponseBadRequest("`query` argument not found in the request")
-
-    k = request.GET.get('k', None)
-    if k is None:
-        return HttpResponseBadRequest("`k` argument not found in the request")
-    k = int(k)
-    result = models.elastic(query, k)
-    return render(request, 'informationRetrival/elastic.html',
                   context={'result': result})
 
 

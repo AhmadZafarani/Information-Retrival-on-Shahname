@@ -4,6 +4,7 @@ from .logic.query_expansion import query_expansion
 from .logic.fasttext import get_fasttext_query_results
 from .logic.tf_idf import get_tfidf_query_results
 from .logic.classification import get_classification_story_for_query
+from .logic.elastic import get_elastic_search_query_results
 
 
 def boolean(query: str, k: int) -> dict:
@@ -69,7 +70,15 @@ def classification(query: str) -> str:
 
 
 def elastic(query: str, k: int) -> list:
-    pass
+    result = {}
+    result["query"] = query
+    expanded_query = query_expansion(query)
+    result["expanded_query"] = expanded_query
+    answers = get_elastic_search_query_results(query, k)
+    result["answers"] = normalize(answers)
+    expanded_answers = get_elastic_search_query_results(expanded_query, k)
+    result["expanded_answers"] = normalize(expanded_answers)
+    return result
 
 
 def normalize(answers: list) -> list:

@@ -9,7 +9,7 @@ class Boolean:
     def __init__(self, a1: list):
         self.docs = a1
 
-    def forward(self, querry: str, k: int = 10):
+    def forward(self, querry: str, k: int = 10) -> list:
         result = []
         for item in tqdm(self.docs):
             status = True
