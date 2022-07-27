@@ -22,6 +22,8 @@ download this three files from links below and place them in path : `backend/inf
 
 [fasttext_vectors.txt](https://drive.google.com/file/d/1P8yihfE6C8Kmi3VTSfr0CrvzovzL6hBn/view?usp=sharing)
 
+[all_vec.out](https://drive.google.com/file/d/11KHGgkyaUyBUzGp1zqJkR75K6TdClkPq/view?usp=sharing)
+
 now we are ready to run the project. To achive that, run:
 
 `cd mir_project`\
