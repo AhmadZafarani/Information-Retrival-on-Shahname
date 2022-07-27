@@ -5,6 +5,7 @@ from .logic.fasttext import get_fasttext_query_results
 from .logic.tf_idf import get_tfidf_query_results
 from .logic.classification import get_classification_story_for_query
 from .logic.elastic import get_elastic_search_query_results
+from .logic.transformers import get_transformers_answers_for_query
 
 
 def boolean(query: str, k: int) -> dict:
@@ -44,7 +45,15 @@ def fasttext(query: str, k: int) -> dict:
 
 
 def transformers(query: str, k: int) -> list:
-    pass
+    result = {}
+    result["query"] = query
+    expanded_query = query_expansion(query)
+    result["expanded_query"] = expanded_query
+    answers = get_transformers_answers_for_query(query, k)
+    result["answers"] = normalize(answers)
+    expanded_answers = get_transformers_answers_for_query(expanded_query, k)
+    result["expanded_answers"] = normalize(expanded_answers)
+    return result
 
 
 def clustering(query: str) -> dict:
@@ -84,5 +93,5 @@ def elastic(query: str, k: int) -> list:
 def normalize(answers: list) -> list:
     result = []
     for answer in answers:
-        result.append(answer.replace("####", "\t\t\t"))
+        result.append(answer.replace("####", "***"))
     return result

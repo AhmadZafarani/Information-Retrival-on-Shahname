@@ -11,3 +11,5 @@ sklearn
 torch
 transformers
 elasticsearch
+material
+sentence_transformers

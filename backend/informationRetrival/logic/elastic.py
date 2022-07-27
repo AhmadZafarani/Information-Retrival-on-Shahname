@@ -14,7 +14,7 @@ class Elastic:
         response = client.search(
             index="shahnameh",  query=search_param, size=k)
         for hit in response['hits']['hits']:
-            beyts.append(hit["_source"]["Beyt"].replace("##", "\t\t\t"))
+            beyts.append(hit["_source"]["Beyt"].replace("##", "***"))
         return beyts
 
 
