@@ -1,4 +1,4 @@
-## Shahname:
+## Search Engine for Shahname:
 In this project, we designed a search engine for Shahname(A long epic poem written by the Persian poet Ferdowsi). After preprocessing the text, we used different models such as Fasttext, TF-IDF,Boolean model, transformers, and elastic search. We also learned a language model for Shahname and used the Rocchio algorithm for query expansion. Finally, we compared Shahname character’s importance with PageRank and HITS (hub and authority) algorithms.
 
 ## شاهنامه:
