@@ -1,20 +1,20 @@
 ## Search Engine for Shahname:
-In this project, we designed a search engine for Shahname(A long epic poem written by the Persian poet Ferdowsi). After preprocessing the text, we used different models such as Fasttext, TF-IDF,Boolean model, transformers, and elastic search. We also learned a language model for Shahname and used the Rocchio algorithm for query expansion. Finally, we compared Shahname character’s importance with PageRank and HITS (hub and authority) algorithms.
+In this project, we designed a search engine for Shahname (A long epic poem written by the Persian poet Ferdowsi). After preprocessing the text, we used different models such as Fasttext, TF-IDF,Boolean model, transformers, and elastic search. We also learned a language model for Shahname and used the Rocchio algorithm for query expansion. Finally, we compared Shahname character’s importance with PageRank and HITS (hub and authority) algorithms.
 
 ## شاهنامه:
 شاهنامه اثر حکیم ابوالقاسم فردوسی توسی، حماسه‌ای منظوم، بر حسب دست نوشته‌های موجود دربرگیرنده نزدیک به ۵۰٬۰۰۰ بیت تا نزدیک به ۶۱٬۰۰۰ بیت و یکی از بزرگ‌ ترین و برجسته‌ترین سروده‌های حماسی جهان است که سرایش آن دست‌آورد دست‌ کم سی سال کارِ پیوسته این سخن‌ سرای نامدار ایرانی است.
-در این پروژه متد هایی که در کلاس بازیابی اطلاعات به آن پرداخته شد شامل درست کردن بردارهای معنا دار، دسته بندی بر اساس اسامی داستان ها، خوشه بندی و لینک بر روی داده ی شاهنامه پیاده سازی شده است و همچنین هر کدام از این متدها با روش های گوناگون مورد اعتبارسنجی قرار گرفته اند. 
+در این پروژه متد هایی که در کلاس بازیابی اطلاعات به آن پرداخته شد شامل درست کردن بردارهای معنادار، دسته بندی بر اساس اسامی داستان ها، خوشه بندی و لینک بر روی داده ی شاهنامه پیاده سازی شده است و همچنین هر کدام از این متدها با روش های گوناگون مورد اعتبارسنجی قرار گرفته اند. 
 
 
 <p align="center">
-<img src="https://github.com/IR1401-Spring-Final-Projects/Shahname1401-2_21/blob/main/backend/shahname.jpg" height="600">
+<img src="./backend/shahname.jpg" height="600">
 </p>
 
 <div dir="rtl">
 
 <b>گزارش فنی</b>
 
-فایل readme توضیحات لازم برای راه اندازی پروژه به کمک docker و docker-compose را دارا میباشد. کد سرور و elasticsearch در container های جداگانه ای قرار دارند.
+فایل [readme](./how-to-run.md) توضیحات لازم برای راه اندازی پروژه به کمک docker و docker-compose را دارا میباشد. کد سرور و elasticsearch در container های جداگانه ای قرار دارند.
 
 
 <b>Backend</b>
